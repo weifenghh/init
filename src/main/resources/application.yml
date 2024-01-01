@@ -1,0 +1,19 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: user
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: wf
+    url: jdbc:mysql://localhost:3306/wf-init
+
+# mybatis??
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
