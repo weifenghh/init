@@ -68,6 +68,7 @@ public class UserController {
         //用户脱敏
         UserVO userVO = BeanUtil.copyProperties(newUser,UserVO.class);
         String jwtToken = JwtUtil.getJwtToken(userVO.getId(), userVO.getUserAccount());
+        System.out.println(jwtToken);
 
         Map<String, Object> loginMap = new HashMap<>();
         loginMap.put("jwtToken",jwtToken);
