@@ -94,6 +94,7 @@ public class UserController {
             throw new BusinessException("密码长度要在6~10位数", 40000);
         }
         User user = BeanUtil.copyProperties(userRegisterDTO,User.class);
+        System.out.print(user);
         boolean flag = userService.save(user);
         if(!flag){
             throw new BusinessException("系统异常,用户注册失败",40000);
